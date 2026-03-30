@@ -6,41 +6,18 @@
 <title>Gayathri Portfolio</title>
 
 <style>
-
-/* BASE */
 body {
   margin: 0;
   font-family: 'Inter', system-ui;
   color: #e5e7eb;
   background: linear-gradient(135deg, #020617, #020617, #0f172a);
-  scroll-behavior: smooth;
-}
-
-/* BACKGROUND */
-body::before {
-  content: "";
-  position: fixed;
-  width: 200%;
-  height: 200%;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(59,130,246,0.15), transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(99,102,241,0.12), transparent 50%);
-  animation: move 14s infinite linear;
-  z-index: -1;
-}
-
-@keyframes move {
-  0% { transform: translate(0,0); }
-  50% { transform: translate(-60px,-40px); }
-  100% { transform: translate(0,0); }
 }
 
 /* NAVBAR */
 .navbar {
   position: sticky;
   top: 0;
-  backdrop-filter: blur(10px);
-  background: rgba(2,6,23,0.7);
+  background: rgba(2,6,23,0.9);
   padding: 15px;
   text-align: center;
   border-bottom: 1px solid #1e293b;
@@ -52,27 +29,25 @@ body::before {
   text-decoration: none;
 }
 
-/* CONTAINER */
+/* LAYOUT */
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 20px;
 }
 
-/* HERO */
 .hero {
   text-align: center;
-  padding: 120px 20px;
+  padding: 100px 20px;
 }
 
-.hero h1 {
-  font-size: 52px;
-}
+.hero h1 { font-size: 48px; }
 
-/* TYPING TEXT */
-#typing {
-  color: #6366f1;
-  font-weight: 500;
+.hero p {
+  color: #9ca3af;
+  max-width: 750px;
+  margin: auto;
+  line-height: 1.7;
 }
 
 /* BUTTONS */
@@ -81,39 +56,18 @@ body::before {
   margin: 6px;
   border-radius: 10px;
   text-decoration: none;
-  transition: 0.3s;
 }
 
-.primary {
-  background: linear-gradient(135deg, #6366f1, #4f46e5);
-  color: white;
-}
-
-.secondary {
-  border: 1px solid #334155;
-  color: white;
-}
-
-.buttons a:hover {
-  transform: translateY(-2px);
-}
+.primary { background: #6366f1; color: white; }
+.secondary { border: 1px solid #334155; color: white; }
 
 /* SECTIONS */
 section {
-  padding: 80px 0;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.8s;
+  padding: 70px 0;
+  border-top: 1px solid #1e293b;
 }
 
-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-h2 {
-  font-size: 30px;
-}
+h2 { margin-bottom: 20px; }
 
 /* GRID */
 .grid {
@@ -121,20 +75,12 @@ h2 {
   gap: 20px;
 }
 
-/* GLASS CARDS */
+/* CARD */
 .card {
   background: rgba(15,23,42,0.6);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(99,102,241,0.2);
   padding: 22px;
   border-radius: 12px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  border-color: #6366f1;
-  box-shadow: 0 0 20px rgba(99,102,241,0.2);
+  border: 1px solid #1e293b;
 }
 
 /* TAG */
@@ -147,6 +93,16 @@ h2 {
   font-size: 12px;
 }
 
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #334155;
+  padding: 10px;
+}
 </style>
 </head>
 
@@ -155,6 +111,7 @@ h2 {
 <!-- NAVBAR -->
 <div class="navbar">
 <a href="#about">About</a>
+<a href="#education">Education</a>
 <a href="#experience">Experience</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
@@ -167,75 +124,185 @@ h2 {
 <div class="hero">
 <h1>Hi, this is Gayathri Chandana Gunimini</h1>
 
-<p id="typing"></p>
-
-<div class="buttons">
-<a href="https://github.com/gayathri02-hub" class="primary">GitHub</a>
-<a href="https://linkedin.com/in/gayathrireddy02" class="secondary">LinkedIn</a>
-<a href="mailto:guniminigayathrims2@gmail.com" class="secondary">Contact</a>
-</div>
+<p>
+I am a Cloud Engineer with a strong foundation in AWS, DevOps practices, and scalable system design. 
+I specialize in building reliable cloud solutions by combining software engineering, data-driven approaches, and real-world system understanding.
+</p>
 </div>
 
 <!-- ABOUT -->
 <section id="about">
-<h2>About</h2>
+<h2>About Me</h2>
+
 <div class="card">
 <p>
-Cloud Computing postgraduate with experience in AWS, Docker, CI/CD, and scalable system design.
+I am currently pursuing a Master’s in Cloud Computing at the National College of Ireland. My core interests lie in cloud infrastructure, system reliability, DevOps workflows, and scalable application deployment.
 </p>
+
 <p>
-Strong foundation in Electronics Engineering, enabling deep understanding of system architecture and networking.
+I have gained hands-on experience working with AWS services such as EC2, S3, and IAM, along with Docker-based containerization and CI/CD pipelines. My projects involve building intrusion detection systems, deploying machine learning models, and creating cloud-integrated applications.
+</p>
+
+<p>
+With a background in Electronics and Communication Engineering, I bring a strong understanding of system architecture, networking, and real-time data systems. This allows me to bridge the gap between hardware-based systems and modern cloud computing environments.
+</p>
+
+<p>
+I am actively seeking opportunities in Cloud Support, Cloud Operations, or DevOps roles where I can contribute to infrastructure monitoring, troubleshooting, and scalable cloud solutions.
 </p>
 </div>
+
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+<h2>Education</h2>
+
+<div class="card">
+<p><b>MSc Cloud Computing</b> – National College of Ireland (Ireland)</p>
+<p><b>BTech Electronics & Communication Engineering</b> – VNITSW (India)</p>
+</div>
+
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
 <h2>Experience</h2>
+
 <div class="grid">
-<div class="card">Salesforce Internship - Cloud CRM systems</div>
-<div class="card">Retail Operations - Problem solving & support</div>
+
+<div class="card">
+<h3>Salesforce Virtual Internship</h3>
+<p>
+Gained hands-on exposure to cloud-based CRM systems and enterprise applications. 
+Worked on understanding business workflows, customer relationship management, and cloud integration concepts.
+</p>
+</div>
+
+<div class="card">
+<h3>The Range – Operations Associate (Ireland)</h3>
+<p>
+Worked in a fast-paced retail environment handling backend systems, inventory operations, and customer service. 
+Developed strong problem-solving skills, attention to detail, and the ability to troubleshoot operational issues efficiently.
+</p>
+</div>
+
+<div class="card">
+<h3>GIGAMADE – Administrative Assistant</h3>
+<p>
+Handled documentation, reporting, and customer communication. 
+Improved organizational skills and gained experience managing workflows and coordinating operations.
+</p>
+</div>
+
 </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
 <h2>Skills</h2>
+
 <div class="card">
+<b>Cloud & Software Skills:</b><br>
 <span class="tag">AWS</span>
 <span class="tag">Docker</span>
-<span class="tag">Linux</span>
+<span class="tag">CI/CD</span>
+<span class="tag">CodePipeline</span>
+<span class="tag">Streamlit</span>
 <span class="tag">Python</span>
+<span class="tag">SQL</span>
+<span class="tag">Linux</span>
+</div>
+
+<div class="card">
+<b>ECE & Core Engineering Skills:</b><br>
+<span class="tag">VLSI</span>
+<span class="tag">Verilog</span>
+<span class="tag">Embedded Systems</span>
+<span class="tag">Signal Processing</span>
 <span class="tag">Networking</span>
 </div>
+
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
 <h2>Projects</h2>
+
 <div class="grid">
 
 <div class="card">
-<h3>IoT Botnet Detection</h3>
-<p>ML system deployed using Docker.</p>
+<h3>IoT Botnet Detection (Thesis)</h3>
+<p>
+Developed a machine learning-based intrusion detection system using Random Forest and One-Class SVM. 
+Deployed using Docker containers to simulate edge-cloud environments and evaluated using performance metrics like latency and F1-score.
+</p>
 </div>
 
 <div class="card">
-<h3>House Price Prediction</h3>
-<p>Streamlit deployment.</p>
+<h3>Ireland House Price Prediction</h3>
+<p>
+Built a Linear Regression model on housing data and deployed an interactive dashboard using Streamlit for visualization and prediction.
+</p>
 </div>
 
 <div class="card">
-<h3>Bookshelf CI/CD</h3>
-<p>AWS CodePipeline project.</p>
+<h3>Bookshelf Application</h3>
+<p>
+Designed a cloud-based application and implemented CI/CD pipelines using AWS CodePipeline to automate build and deployment processes.
+</p>
 </div>
 
 <div class="card">
-<h3>Smart Dam IoT</h3>
-<p>Real-time monitoring system.</p>
+<h3>Blockchain Project</h3>
+<p>
+Implemented a decentralized system focusing on secure transactions and distributed ledger concepts, enhancing understanding of scalable architectures.
+</p>
+</div>
+
+<div class="card">
+<h3>Turbo Code VLSI Project</h3>
+<p>
+Designed Turbo Encoder and Decoder using Verilog HDL for LTE communication systems with ASIC-level implementation.
+</p>
+</div>
+
+<div class="card">
+<h3>Smart Dam IoT System</h3>
+<p>
+Developed an IoT-based monitoring system using ESP32 and sensors to track water levels and provide real-time alerts.
+</p>
 </div>
 
 </div>
+</section>
+
+<!-- TABLE SECTION -->
+<section>
+<h2>Technical Comparison</h2>
+
+<table>
+<tr>
+<th>Cloud Skills</th>
+<th>ECE Skills</th>
+</tr>
+
+<tr>
+<td>AWS, Docker, CI/CD</td>
+<td>VLSI, Verilog</td>
+</tr>
+
+<tr>
+<td>Scalable Systems</td>
+<td>Embedded Systems</td>
+</tr>
+
+<tr>
+<td>Cloud Deployment</td>
+<td>Signal Processing</td>
+</tr>
+</table>
+
 </section>
 
 <!-- CONTACT -->
@@ -245,36 +312,6 @@ Strong foundation in Electronics Engineering, enabling deep understanding of sys
 </section>
 
 </div>
-
-<!-- JS -->
-<script>
-
-/* typing effect */
-const text = "Cloud Engineer | AWS | DevOps | Scalable Systems";
-let i = 0;
-
-function typing(){
-  if(i < text.length){
-    document.getElementById("typing").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typing, 50);
-  }
-}
-typing();
-
-/* scroll reveal */
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100){
-      sec.classList.add("show");
-    }
-  });
-});
-
-</script>
 
 </body>
 </html>
