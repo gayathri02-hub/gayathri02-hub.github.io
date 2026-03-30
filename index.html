@@ -8,37 +8,44 @@
 <style>
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: system-ui;
   background: #020617;
-  color: white;
+  color: #e2e8f0;
 }
 
+/* Layout */
 .container {
-  width: 90%;
-  max-width: 1000px;
+  max-width: 900px;
   margin: auto;
+  padding: 20px;
 }
 
-header {
+/* Hero */
+.hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px;
 }
 
-h1 {
-  font-size: 48px;
+.hero h1 {
+  font-size: 50px;
   margin-bottom: 10px;
 }
 
-.subtitle {
+.hero p {
   color: #94a3b8;
-  margin-bottom: 20px;
+  margin: 6px 0;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 20px;
 }
 
 .buttons a {
-  text-decoration: none;
-  padding: 10px 20px;
-  margin: 5px;
+  padding: 10px 18px;
   border-radius: 6px;
+  text-decoration: none;
+  margin: 5px;
 }
 
 .primary {
@@ -47,42 +54,36 @@ h1 {
 }
 
 .secondary {
-  border: 1px solid white;
+  border: 1px solid #334155;
   color: white;
 }
 
+/* Sections */
 section {
-  padding: 50px 0;
+  padding: 60px 0;
 }
 
 h2 {
-  text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
+/* Cards */
 .grid {
   display: grid;
   gap: 20px;
 }
 
-.skills, .projects {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
 .card {
   background: #0f172a;
+  border: 1px solid #1e293b;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid #1e293b;
 }
 
-.card h3 {
-  margin-top: 0;
-}
-
+/* Footer */
 .footer {
   text-align: center;
-  padding: 30px;
+  padding: 40px;
   border-top: 1px solid #1e293b;
 }
 </style>
@@ -91,68 +92,69 @@ h2 {
 
 <body>
 
-<header class="container">
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
   <h1>Gayathri Chandana Gunimini</h1>
-  <p class="subtitle">Cloud Support Engineer | AWS | Linux | Networking</p>
-  <p class="subtitle">Building scalable cloud solutions | Seeking opportunities in Ireland</p>
+  <p>Cloud Support Engineer | AWS | Linux</p>
+  <p>Building scalable cloud solutions</p>
 
   <div class="buttons">
     <a href="https://github.com/gayathri02-hub" class="primary">GitHub</a>
     <a href="https://linkedin.com/in/gayathrireddy02" class="secondary">LinkedIn</a>
   </div>
-</header>
+</div>
 
-<section class="container">
-  <h2>About Me</h2>
-  <p style="text-align:center;">
-    Cloud Computing postgraduate at NCI with hands-on experience in AWS, Linux, and cloud systems.
-    Passionate about cloud support, troubleshooting, and building scalable systems.
+<!-- ABOUT -->
+<section>
+  <h2>About</h2>
+  <p>
+    Cloud Computing postgraduate at NCI with experience in AWS, Linux, and cloud systems.
+    Passionate about cloud support, troubleshooting, and scalable systems.
   </p>
 </section>
 
-<section class="container">
+<!-- SKILLS -->
+<section>
   <h2>Skills</h2>
-  <div class="grid skills">
+  <div class="grid">
     <div class="card">AWS (EC2, S3, IAM)</div>
     <div class="card">Linux & Git</div>
-    <div class="card">Docker (Basic)</div>
     <div class="card">Python & SQL</div>
-    <div class="card">Networking</div>
-    <div class="card">IT Support & Troubleshooting</div>
+    <div class="card">Networking & Troubleshooting</div>
   </div>
 </section>
 
-<section class="container">
+<!-- PROJECTS -->
+<section>
   <h2>Projects</h2>
 
-  <div class="grid projects">
+  <div class="grid">
 
     <div class="card">
       <h3>IoT Botnet Detection</h3>
-      <p>Developed ML-based intrusion detection system using Random Forest & SVM.</p>
-      <p>Improved detection accuracy for malicious IoT traffic.</p>
-      <a href="#">GitHub (coming soon)</a>
+      <p>ML-based intrusion detection using Random Forest & SVM.</p>
     </div>
 
     <div class="card">
-      <h3>Ireland House Price Prediction</h3>
-      <p>Built regression model using real housing data.</p>
-      <p>Deployed with Streamlit for real-time predictions.</p>
-      <a href="#">GitHub (coming soon)</a>
+      <h3>House Price Prediction</h3>
+      <p>Regression model for Ireland housing data.</p>
     </div>
 
   </div>
 </section>
 
-<section class="container">
+<!-- CONTACT -->
+<section>
   <h2>Contact</h2>
-  <p style="text-align:center;">Email: gayathrichandana2@gmail.com</p>
-  <p style="text-align:center;">GitHub: github.com/gayathri02-hub</p>
-  <p style="text-align:center;">LinkedIn: linkedin.com/in/gayathrireddy02</p>
+  <p>Email: gayathrichandana2@gmail.com</p>
 </section>
 
+</div>
+
 <div class="footer">
-  <p>© 2026 Gayathri Chandana Gunimini</p>
+  <p>© 2026 Gayathri</p>
 </div>
 
 </body>
