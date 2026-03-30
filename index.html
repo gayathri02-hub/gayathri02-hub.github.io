@@ -6,7 +6,6 @@
 <title>Gayathri Portfolio</title>
 
 <style>
-/* Smooth scroll */
 html { scroll-behavior: smooth; }
 
 body {
@@ -17,46 +16,45 @@ body {
   overflow-x: hidden;
 }
 
-/* Animated background */
+/* Animated gradient background */
 body::before {
   content: "";
   position: fixed;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 30% 30%, #1e293b 0%, transparent 40%),
-              radial-gradient(circle at 70% 70%, #334155 0%, transparent 40%);
-  animation: moveBg 12s linear infinite;
+  background: radial-gradient(circle at 20% 30%, #1e293b, transparent 40%),
+              radial-gradient(circle at 80% 70%, #334155, transparent 40%);
+  animation: move 15s linear infinite;
   z-index: -1;
 }
 
-@keyframes moveBg {
+@keyframes move {
   0% { transform: translate(0,0); }
-  50% { transform: translate(-50px, -50px); }
+  50% { transform: translate(-60px, -60px); }
   100% { transform: translate(0,0); }
 }
 
-/* Layout */
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
   padding: 20px;
 }
 
-/* Hero */
+/* HERO */
 .hero {
   text-align: center;
   padding: 100px 20px;
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 52px;
 }
 
 .hero p {
   color: #94a3b8;
 }
 
-/* Buttons */
+/* BUTTONS */
 .buttons a {
   padding: 10px 20px;
   margin: 5px;
@@ -79,23 +77,27 @@ body::before {
   transform: scale(1.05);
 }
 
-/* Sections */
+/* SECTION */
 section {
   padding: 60px 0;
   border-top: 1px solid #1e293b;
 }
 
-h2 { margin-bottom: 20px; }
+h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
 
-/* Cards */
+/* GRID */
 .grid {
   display: grid;
   gap: 20px;
 }
 
+/* CARDS */
 .card {
   background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   border: 1px solid #1e293b;
   padding: 20px;
   border-radius: 12px;
@@ -107,7 +109,16 @@ h2 { margin-bottom: 20px; }
   border-color: #7c3aed;
 }
 
-/* Footer */
+/* TAG */
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 6px;
+  background: #1e293b;
+}
+
+/* FOOTER */
 .footer {
   text-align: center;
   padding: 40px;
@@ -123,8 +134,8 @@ h2 { margin-bottom: 20px; }
 <!-- HERO -->
 <div class="hero">
   <h1>Gayathri Chandana Gunimini</h1>
-  <p>Cloud Support | AWS | Linux | Networking</p>
-  <p>Building scalable cloud solutions | Seeking roles in Ireland</p>
+  <p>Cloud Support Engineer | AWS | Linux | Networking</p>
+  <p>Delivering scalable cloud solutions & troubleshooting distributed systems</p>
 
   <div class="buttons">
     <a href="https://github.com/gayathri02-hub" class="primary">GitHub</a>
@@ -135,36 +146,54 @@ h2 { margin-bottom: 20px; }
 
 <!-- ABOUT -->
 <section>
-  <h2>About</h2>
+  <h2>About Me</h2>
   <p>
-    MSc Cloud Computing student at NCI with hands-on experience in AWS, Linux, and system troubleshooting.
-    Passionate about Cloud Support and DevOps environments.
+    I am a Cloud Computing postgraduate at the National College of Ireland with a strong foundation in AWS, Linux systems, and cloud-based architectures.
+    I specialize in troubleshooting, system monitoring, and supporting scalable cloud environments.
+  </p>
+
+  <p>
+    My academic and project experience has equipped me with hands-on knowledge in deploying cloud-based solutions, working with machine learning systems, 
+    and understanding real-world system failures and debugging techniques.
+  </p>
+
+  <p>
+    Alongside my technical background, I bring strong operational and communication skills from my professional experience, enabling me to work effectively in fast-paced environments.
+    I am currently seeking Cloud Support or IT Support roles where I can contribute and grow.
   </p>
 </section>
 
 <!-- SKILLS -->
 <section>
-  <h2>Skills</h2>
+  <h2>Technical Skills</h2>
+
   <div class="grid">
 
     <div class="card">
       <b>Cloud</b><br>
-      AWS (EC2, S3, IAM)
+      <span class="tag">AWS</span>
+      <span class="tag">EC2</span>
+      <span class="tag">S3</span>
+      <span class="tag">IAM</span>
     </div>
 
     <div class="card">
       <b>DevOps</b><br>
-      Docker, Git, Linux
+      <span class="tag">Docker</span>
+      <span class="tag">Linux</span>
+      <span class="tag">Git</span>
     </div>
 
     <div class="card">
       <b>Programming</b><br>
-      Python, SQL
+      <span class="tag">Python</span>
+      <span class="tag">SQL</span>
     </div>
 
     <div class="card">
       <b>Support</b><br>
-      Troubleshooting, Networking
+      <span class="tag">Troubleshooting</span>
+      <span class="tag">Networking</span>
     </div>
 
   </div>
@@ -176,12 +205,18 @@ h2 { margin-bottom: 20px; }
 
   <div class="card">
     <h3>The Range — Operations Associate</h3>
-    <p>Handled inventory systems, backend operations, and reporting.</p>
+    <p>
+      Managed backend systems, inventory processing, and operational workflows.
+      Strengthened attention to detail, system accuracy, and problem-solving under pressure.
+    </p>
   </div>
 
   <div class="card">
-    <h3>GIGAMADE — Admin Assistant</h3>
-    <p>Managed communication, documentation, and customer handling.</p>
+    <h3>GIGAMADE — Administrative Assistant</h3>
+    <p>
+      Coordinated client communication, documentation, and reporting.
+      Developed strong organizational, communication, and multitasking skills.
+    </p>
   </div>
 
 </section>
@@ -192,23 +227,16 @@ h2 { margin-bottom: 20px; }
 
   <div class="grid">
 
-    <!-- Replace links with your GitHub repos -->
     <div class="card">
       <h3>IoT Botnet Detection</h3>
-      <p>ML-based intrusion detection system.</p>
-      <a href="YOUR_GITHUB_LINK">View Project</a>
+      <p>Built ML-based intrusion detection system.</p>
+      <a href="YOUR_LINK">View Project</a>
     </div>
 
     <div class="card">
       <h3>House Price Prediction</h3>
-      <p>Regression model with data visualization.</p>
-      <a href="YOUR_GITHUB_LINK">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>More Projects</h3>
-      <p>Explore additional work on GitHub.</p>
-      <a href="https://github.com/gayathri02-hub">View All</a>
+      <p>Regression model with visualization.</p>
+      <a href="YOUR_LINK">View Project</a>
     </div>
 
   </div>
@@ -220,7 +248,7 @@ h2 { margin-bottom: 20px; }
   <h2>Certifications</h2>
 
   <div class="card">AWS Academy Cloud Foundations</div>
-  <div class="card">Python Certification (MTA)</div>
+  <div class="card">MTA Python Certification</div>
 
 </section>
 
@@ -233,7 +261,7 @@ h2 { margin-bottom: 20px; }
 </div>
 
 <div class="footer">
-  <p>© 2026 Gayathri</p>
+  <p>© 2026 Gayathri Chandana Gunimini</p>
 </div>
 
 </body>
