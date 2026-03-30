@@ -1,34 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gayathri Portfolio</title>
 
 <style>
 body {
-  font-family: 'Segoe UI';
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
   background: #020617;
   color: white;
-  text-align: center;
 }
 
-section {
-  padding: 50px;
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  padding: 80px 20px;
 }
 
 h1 {
   font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+.buttons a {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 6px;
+}
+
+.primary {
+  background: #7c3aed;
+  color: white;
+}
+
+.secondary {
+  border: 1px solid white;
+  color: white;
+}
+
+section {
+  padding: 50px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.skills, .projects {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .card {
   background: #0f172a;
-  border: 1px solid #1e293b;
   padding: 20px;
-  margin: 15px;
-  border-radius: 12px;
+  border-radius: 10px;
+  border: 1px solid #1e293b;
 }
 
-a {
-  color: #a855f7;
+.card h3 {
+  margin-top: 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid #1e293b;
 }
 </style>
 
@@ -36,59 +91,69 @@ a {
 
 <body>
 
-<section>
-<h1>Gayathri Chandana Gunimini</h1>
+<header class="container">
+  <h1>Gayathri Chandana Gunimini</h1>
+  <p class="subtitle">Cloud Support Engineer | AWS | Linux | Networking</p>
+  <p class="subtitle">Building scalable cloud solutions | Seeking opportunities in Ireland</p>
 
-<p>Cloud Support Engineer | AWS | Linux | Networking</p>
-<p>Building scalable cloud solutions | Seeking opportunities in Ireland</p>
+  <div class="buttons">
+    <a href="https://github.com/gayathri02-hub" class="primary">GitHub</a>
+    <a href="https://linkedin.com/in/gayathrireddy02" class="secondary">LinkedIn</a>
+  </div>
+</header>
 
-<div style="margin-top:20px;">
-<a href="https://github.com/gayathri02-hub">GitHub</a> |
-<a href="https://linkedin.com/in/gayathrireddy02">LinkedIn</a>
+<section class="container">
+  <h2>About Me</h2>
+  <p style="text-align:center;">
+    Cloud Computing postgraduate at NCI with hands-on experience in AWS, Linux, and cloud systems.
+    Passionate about cloud support, troubleshooting, and building scalable systems.
+  </p>
+</section>
+
+<section class="container">
+  <h2>Skills</h2>
+  <div class="grid skills">
+    <div class="card">AWS (EC2, S3, IAM)</div>
+    <div class="card">Linux & Git</div>
+    <div class="card">Docker (Basic)</div>
+    <div class="card">Python & SQL</div>
+    <div class="card">Networking</div>
+    <div class="card">IT Support & Troubleshooting</div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Projects</h2>
+
+  <div class="grid projects">
+
+    <div class="card">
+      <h3>IoT Botnet Detection</h3>
+      <p>Developed ML-based intrusion detection system using Random Forest & SVM.</p>
+      <p>Improved detection accuracy for malicious IoT traffic.</p>
+      <a href="#">GitHub (coming soon)</a>
+    </div>
+
+    <div class="card">
+      <h3>Ireland House Price Prediction</h3>
+      <p>Built regression model using real housing data.</p>
+      <p>Deployed with Streamlit for real-time predictions.</p>
+      <a href="#">GitHub (coming soon)</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="container">
+  <h2>Contact</h2>
+  <p style="text-align:center;">Email: gayathrichandana2@gmail.com</p>
+  <p style="text-align:center;">GitHub: github.com/gayathri02-hub</p>
+  <p style="text-align:center;">LinkedIn: linkedin.com/in/gayathrireddy02</p>
+</section>
+
+<div class="footer">
+  <p>© 2026 Gayathri Chandana Gunimini</p>
 </div>
-
-</section>
-
-<section>
-<h2>About Me</h2>
-<p>Cloud Computing postgraduate at NCI with hands-on experience in AWS, Linux, and cloud systems.</p>
-</section>
-
-<section>
-<h2>Skills</h2>
-
-<div class="card">AWS | EC2 | S3 | IAM</div>
-<div class="card">Linux | Git | Docker (Basic)</div>
-<div class="card">Python | SQL</div>
-<div class="card">Networking | Troubleshooting | IT Support</div>
-
-</section>
-
-<section>
-<h2>Projects</h2>
-
-<div class="card">
-<h3>IoT Botnet Detection</h3>
-<p>Developed ML-based intrusion detection system using Random Forest & SVM.</p>
-<p>Improved detection accuracy for malicious IoT traffic.</p>
-<a href="#">GitHub (coming soon)</a>
-</div>
-
-<div class="card">
-<h3>Ireland House Price Prediction</h3>
-<p>Built regression model and deployed using Streamlit.</p>
-<p>Provides real-time housing predictions.</p>
-<a href="#">GitHub (coming soon)</a>
-</div>
-
-</section>
-
-<section>
-<h2>Contact</h2>
-<p>Email: gayathrichandana2@gmail.com</p>
-<p>GitHub: github.com/gayathri02-hub</p>
-<p>LinkedIn: linkedin.com/in/gayathrireddy02</p>
-</section>
 
 </body>
 </html>
