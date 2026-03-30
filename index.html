@@ -6,95 +6,167 @@
 <title>Gayathri Portfolio</title>
 
 <style>
+
+/* BASE */
 body {
   margin: 0;
-  font-family: system-ui;
-  background: black;
+  font-family: 'Inter', system-ui;
   color: #e5e7eb;
+  background: #050505;
+  overflow-x: hidden;
 }
 
-/* Grey animated waves */
-body::before {
-  content: "";
+/* PREMIUM DARK BACKGROUND */
+.background {
   position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(75,85,99,0.15), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(107,114,128,0.12), transparent 50%),
+    linear-gradient(120deg, #000000, #0a0a0a, #050505);
+}
+
+/* SUBTLE MOVEMENT */
+.background::after {
+  content: "";
+  position: absolute;
   width: 200%;
   height: 200%;
   background:
-    radial-gradient(circle at 20% 30%, #1f2937, transparent 40%),
-    radial-gradient(circle at 80% 70%, #374151, transparent 40%);
-  animation: wave 12s infinite linear;
-  z-index: -1;
+    radial-gradient(circle, rgba(156,163,175,0.08), transparent 60%);
+  animation: move 18s infinite linear;
 }
 
-@keyframes wave {
+@keyframes move {
   0% { transform: translate(0,0); }
-  50% { transform: translate(-50px,-40px); }
+  50% { transform: translate(-60px,-40px); }
   100% { transform: translate(0,0); }
 }
 
+/* LAYOUT */
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 20px;
 }
 
+/* HERO */
 .hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px;
 }
 
-.hero h1 { font-size: 50px; }
+.hero h1 {
+  font-size: 52px;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #9ca3af;
+  max-width: 700px;
+  margin: 10px auto;
+  line-height: 1.6;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 20px;
+}
 
 .buttons a {
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 8px;
+  display: inline-block;
+  padding: 12px 22px;
+  margin: 6px;
+  border-radius: 10px;
   text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
 }
 
-.primary { background: #6366f1; color: white; }
-.secondary { border: 1px solid #374151; color: white; }
+.primary {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+}
 
+.secondary {
+  border: 1px solid #374151;
+  color: #e5e7eb;
+}
+
+.buttons a:hover {
+  transform: translateY(-2px);
+}
+
+/* SECTION */
 section {
-  padding: 60px 0;
-  border-top: 1px solid #1f2937;
+  padding: 70px 0;
+  border-top: 1px solid #111827;
 }
 
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* GRID */
 .grid {
   display: grid;
   gap: 20px;
 }
 
+/* CARDS */
 .card {
-  background: rgba(17,24,39,0.7);
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #1f2937;
+  background: rgba(17,24,39,0.6);
+  padding: 24px;
+  border-radius: 14px;
+  border: 1px solid rgba(75,85,99,0.2);
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
 }
 
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(156,163,175,0.3);
+}
+
+/* TAGS */
 .tag {
   display: inline-block;
-  padding: 6px 10px;
-  background: #1f2937;
-  margin: 4px;
-  border-radius: 6px;
+  padding: 6px 12px;
+  background: rgba(55,65,81,0.6);
+  margin: 5px;
+  border-radius: 8px;
   font-size: 12px;
 }
+
 </style>
 </head>
 
 <body>
 
+<div class="background"></div>
+
 <div class="container">
 
 <!-- HERO -->
 <div class="hero">
-  <h1>Hi, I'm Gayathri 👋</h1>
-  <p>Cloud Analyst | AWS | Linux | DevOps</p>
-  <p>Building scalable systems with cloud, data & real-world engineering experience</p>
+  <h1>Gayathri Chandana Gunimini</h1>
+
+  <p>
+  Cloud Engineer specializing in AWS, system reliability, and scalable infrastructure.  
+  I design and build cloud-driven solutions backed by strong engineering fundamentals and real-world project experience.
+  </p>
+
+  <p>
+  Focused on cloud operations, DevOps practices, and distributed systems, with a foundation in electronics and system-level architecture.
+  </p>
 
   <div class="buttons">
-    <a href="https://github.com/gayathri02-hub" class="primary">GitHub</a>
+    <a href="https://github.com/gayathri02-hub" class="primary">View GitHub</a>
     <a href="https://linkedin.com/in/gayathrireddy02" class="secondary">LinkedIn</a>
     <a href="mailto:guniminigayathrims2@gmail.com" class="secondary">Contact</a>
   </div>
@@ -102,25 +174,25 @@ section {
 
 <!-- ABOUT -->
 <section>
-<h2>About Me</h2>
+<h2>About</h2>
 
+<div class="card">
 <p>
-I am a Cloud Computing postgraduate at the National College of Ireland with a strong foundation in cloud infrastructure, distributed systems, and real-time data processing. 
-My academic and project experience bridges Electronics Engineering and modern Cloud technologies.
+I am currently pursuing a Master’s in Cloud Computing at the National College of Ireland, with hands-on experience in AWS, Docker, CI/CD, and machine learning-based systems.
 </p>
 
 <p>
-I have hands-on experience in AWS, Docker-based deployments, CI/CD pipelines, and building scalable machine learning solutions. 
-My work focuses on solving real-world problems using data-driven and cloud-native approaches.
+My work focuses on building scalable, efficient, and secure cloud solutions, including intrusion detection systems, data-driven applications, and automated deployment pipelines.
 </p>
 
 <p>
-Coming from an Electronics & Communication background, I bring strong knowledge in system-level design, networking, and embedded systems — giving me a deeper understanding of how cloud integrates with real-world hardware systems.
+With a background in Electronics and Communication Engineering, I bring strong knowledge in system design, networking, and embedded systems — enabling me to understand how real-world systems integrate with cloud infrastructure.
 </p>
 
 <p>
-I am actively seeking roles in Cloud Support, Cloud Operations, or DevOps where I can contribute to infrastructure reliability, system monitoring, and scalable cloud solutions.
+I am actively seeking opportunities in Cloud Support, DevOps, and Cloud Engineering roles where I can contribute to infrastructure stability, monitoring, and system optimization.
 </p>
+</div>
 
 </section>
 
@@ -128,123 +200,59 @@ I am actively seeking roles in Cloud Support, Cloud Operations, or DevOps where 
 <section>
 <h2>Technical Skills</h2>
 
-<div class="grid">
-
 <div class="card">
-<b>Cloud & DevOps</b><br>
 <span class="tag">AWS</span>
 <span class="tag">Docker</span>
 <span class="tag">CI/CD</span>
-<span class="tag">CodePipeline</span>
-<span class="tag">Streamlit</span>
-</div>
-
-<div class="card">
-<b>Programming</b><br>
+<span class="tag">Linux</span>
 <span class="tag">Python</span>
 <span class="tag">SQL</span>
-</div>
-
-<div class="card">
-<b>Systems</b><br>
-<span class="tag">Linux</span>
 <span class="tag">Networking</span>
 <span class="tag">Troubleshooting</span>
-</div>
-
-</div>
-</section>
-
-<!-- ECE + CLOUD BACKGROUND -->
-<section>
-<h2>Core Technical Foundation</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Cloud Engineering Skills</h3>
-<p>AWS infrastructure, containerization using Docker, scalable ML deployment, CI/CD automation, and cloud monitoring.</p>
-</div>
-
-<div class="card">
-<h3>Electronics & Engineering Background</h3>
-<p>VLSI Design, Operating Systems, Network Analysis, Embedded Systems, Communication Systems, Signal Processing.</p>
-</div>
-
-</div>
-</section>
-
-<!-- EXPERIENCE -->
-<section>
-<h2>Experience</h2>
-
-<div class="card">
-<h3>Salesforce Virtual Internship</h3>
-<p>Gained hands-on experience in CRM systems, cloud-based business solutions, and enterprise workflows.</p>
-</div>
-
-<div class="card">
-<h3>The Range — Operations Associate</h3>
-<p>Handled real-time operations, problem-solving, and backend support in a fast-paced environment.</p>
 </div>
 
 </section>
 
 <!-- PROJECTS -->
 <section>
-<h2>Projects (Cloud-Focused)</h2>
+<h2>Projects</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>IoT Botnet Detection (Thesis)</h3>
-<p>Built ML-based intrusion detection deployed using Docker containers in a simulated cloud-edge environment.</p>
+<h3>IoT Botnet Detection System</h3>
+<p>Designed a lightweight intrusion detection system using machine learning, deployed in Docker containers simulating edge-cloud environments.</p>
 </div>
 
 <div class="card">
-<h3>Ireland House Price Prediction</h3>
-<p>Developed regression model and deployed interactive dashboard using Streamlit.</p>
+<h3>House Price Prediction</h3>
+<p>Built a regression-based prediction system and deployed using Streamlit for interactive visualization.</p>
 </div>
 
 <div class="card">
-<h3>Bookshelf Application</h3>
-<p>Implemented CI/CD pipeline using AWS CodePipeline for automated deployment.</p>
-</div>
-
-</div>
-</section>
-
-<!-- ECE PROJECTS -->
-<section>
-<h2>ECE & Hardware Projects (Cloud-Related Foundations)</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Turbo Code Implementation in VLSI</h3>
-<p>
-Designed and implemented Turbo Encoder & Decoder using Verilog HDL for LTE systems. 
-Worked on ASIC-level design, simulation, and performance optimization.
-</p>
+<h3>Smart Dam IoT System</h3>
+<p>Developed a real-time monitoring system using ESP32 and sensors, integrating data collection and remote monitoring.</p>
 </div>
 
 <div class="card">
-<h3>Smart Dam using IoT</h3>
-<p>
-Built IoT-based real-time monitoring system using ESP32, sensors, and wireless communication. 
-Implemented data collection, remote monitoring, and automated control systems.
-</p>
+<h3>Turbo Code VLSI Design</h3>
+<p>Implemented Turbo Encoder and Decoder using Verilog for LTE communication systems with ASIC-level design considerations.</p>
 </div>
 
 </div>
+
 </section>
 
 <!-- CERTIFICATIONS -->
 <section>
 <h2>Certifications</h2>
 
+<div class="grid">
+
 <div class="card">AWS Certification</div>
 <div class="card">Salesforce Certification</div>
+
+</div>
 
 </section>
 
